@@ -15,7 +15,7 @@
 import argparse
 from pathlib import Path
 import sys
-from jupyterlab_ml_devenv.envtool.utils.conda_env_deployment_tool import (
+from mldevenv.envtool.utils.conda_env_deployment_tool import (
     update_current_conda_env,
 )
 
@@ -66,7 +66,7 @@ def run_conda_env_yaml_transform(
     conda_env_transform, in_file, out_file, except_package_list
 ):
 
-    from jupyterlab_ml_devenv.envtool.utils.conda_env_yaml_tools import (
+    from mldevenv.envtool.utils.conda_env_yaml_tools import (
         conda_yaml_versions_strip,
         conda_yaml_versions_eq2ge,
     )

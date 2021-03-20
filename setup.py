@@ -19,7 +19,7 @@ from pip._internal.req import parse_requirements
 
 # flake8: noqa
 
-NAMESPACE = "jupyterlab_ml_devenv"
+NAMESPACE = "mldevenv"
 SERVICE = "envtool"
 
 NAME = "{}.{}".format(NAMESPACE, SERVICE)

@@ -273,7 +273,7 @@ def update_conda_env(conda_env_path, source_conda_env_yaml_file, mode, debug=Fal
         pip_install_modules_by_relpath(module_relpath_list)
 
     if cmd_run_param_dict["jlab_install_extensions"]:
-        jlab_install_extensions([])
+        jlab_install_extensions(["jupyterlab-plotly@v4.14.3"])
 
 
 def update_current_conda_env(*args, **kwargs):

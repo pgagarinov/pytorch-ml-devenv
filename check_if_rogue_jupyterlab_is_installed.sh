@@ -14,7 +14,7 @@
 
 #!/bin/zsh
 # set -e
-pip_list_jupyter_ver_output="$(pip list|grep 'jupyterlab.*3.0.6')"
+pip_list_jupyter_ver_output="$(pip list|grep 'jupyterlab.*3.0.12')"
 if [ -z "$pip_list_jupyter_ver_output" ]; then
   pip_list_jupyter_output="$(pip list|grep 'jupyterlab\ ')"
   echo "!!!!>>>>A rogue version of jupyterlab was found and needs to be removed: '$pip_list_jupyter_output' <<<<!!!!"

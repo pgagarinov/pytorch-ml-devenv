@@ -44,13 +44,34 @@ def proc_tree(dep_list, func):
     return spec_list
 
 
+def match_spec_fixed_parse(inp_str):
+    ind_name_right = min([ind for ind, c in enumerate(inp_str) if c in '~=!<>'])
+    ind_name_left = inp_str.find('::')
+    if ind_name_left<0:
+        ind_name_left =0
+    else:
+        ind_name_left = ind_name_left+2
+
+    orig_name = inp_str[ind_name_left: ind_name_right]
+    match_spec = MatchSpec(inp_str, name = orig_name)
+    return match_spec
+
+
 def parse_dependencies(dep_list):
-    spec_list = proc_tree(dep_list, MatchSpec)
+    spec_list = proc_tree(dep_list, match_spec_fixed_parse)
     return spec_list
 
 
+def match_spec2str(match_spec):
+    res_str = match_spec.spec
+    if 'channel' in match_spec._match_components:
+        channel = match_spec._match_components['channel']
+        res_str = f'{channel}::{res_str}'
+    return res_str
+
+
 def serialize_dependencies(spec_list):
-    dep_list = proc_tree(spec_list, lambda spec_obj: spec_obj.spec)
+    dep_list = proc_tree(spec_list, match_spec2str)
     return dep_list
 
 
