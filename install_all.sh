@@ -28,9 +28,9 @@ printf "${MSGCOLOR}Installing MLDevEnv management tool...${NOCOLOR}\n"
 pip install -e .
 printf "${MSGCOLOR}Installing MLDevEnv management tool: done${NOCOLOR}\n\n"
 
-printf "${MSGCOLOR}Installing all dependencies for Jupyter ML development environment...${NOCOLOR}\n"
+printf "${MSGCOLOR}Installing all dependencies for ML Development Environment...${NOCOLOR}\n"
 mlenvtool conda_env_cur_update -y 
-printf "${MSGCOLOR}Installing all dependencies for Jupyter ML development environment: done${NOCOLOR}\n\n"
+printf "${MSGCOLOR}Installing all dependencies for ML Development Environment: done${NOCOLOR}\n\n"
 
 
 printf "${MSGCOLOR}Installing enabling jupyterlab extensions...${NOCOLOR}\n"

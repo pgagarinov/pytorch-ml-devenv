@@ -220,10 +220,10 @@ def filter_python_requirements_by_mode(
     return Path(out_stream.name)
 
 
-def update_conda_env(conda_env_path, source_conda_env_yaml_file, mode, debug=False):
+def update_conda_env(conda_env_path, source_conda_env_yaml_file, update_mode, debug=False):
 
-    if mode in ENV_UPDATE_MODE2CMD_DICT:
-        cmd_run_param_dict: Dict[str, Any] = ENV_UPDATE_MODE2CMD_DICT[mode]
+    if update_mode in ENV_UPDATE_MODE2CMD_DICT:
+        cmd_run_param_dict: Dict[str, Any] = ENV_UPDATE_MODE2CMD_DICT[update_mode]
     else:
         cmd_run_param_dict: Dict[str, Any] = {
             "install_requirements": True,
@@ -236,7 +236,7 @@ def update_conda_env(conda_env_path, source_conda_env_yaml_file, mode, debug=Fal
     if cmd_run_param_dict["install_requirements"]:
         python_requirements_abs_path: Path = filter_python_requirements_by_mode(
             source_conda_env_yaml_file,
-            mode if cmd_run_param_dict["filter_requirements"] else "all",
+            update_mode if cmd_run_param_dict["filter_requirements"] else "all",
         )
         update_conda_env_from_relfile(
             conda_env_path, python_requirements_abs_path, debug
