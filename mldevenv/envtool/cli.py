@@ -50,7 +50,7 @@ MLDEVENV_CONDA_REQ_FILE_ABS_PATH = (
 
 STRATEGY_DESCRIPTION_DICT =\
     {"conda_env_yaml_transform":
-         "Transforms Conda YAML environment file using one of the predefined algorithms.",
+         "Transforms conda YAML environment file using one of the predefined algorithms.",
      "conda_env_cur_update":
          "Update current conda environment by installing additional packages"
     }

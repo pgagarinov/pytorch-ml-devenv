@@ -1,3 +1,4 @@
+#!/bin/zsh
 # Copyright Peter Gagarinov.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,7 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#!/bin/zsh
 # set -e
 pip_list_jupyter_ver_output="$(pip list|grep 'jupyterlab.*3.0.12')"
 if [ -z "$pip_list_jupyter_ver_output" ]; then

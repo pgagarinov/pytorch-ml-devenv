@@ -42,5 +42,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
  - MLDevEnv: pip package versions are now generated correctly
+ - `#!/bin/bash` is moved to the first line in all bash script
 
 
