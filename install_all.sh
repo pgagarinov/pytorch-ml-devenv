@@ -29,7 +29,7 @@ pip install -e .
 printf "${MSGCOLOR}Installing MLDevEnv management tool: done${NOCOLOR}\n\n"
 
 printf "${MSGCOLOR}Installing all dependencies for Jupyter ML development environment...${NOCOLOR}\n"
-mlenvtool conda_env_cur_update all
+mlenvtool conda_env_cur_update -y 
 printf "${MSGCOLOR}Installing all dependencies for Jupyter ML development environment: done${NOCOLOR}\n\n"
 
 

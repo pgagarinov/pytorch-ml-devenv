@@ -20,8 +20,46 @@ import sys
 import logging
 import tempfile
 from typing import List, Dict, Union, Any
+from mldevenv.envtool.utils.common import get_current_conda_env_path
 
-#
+ENV_UPDATE_MODE2CMD_DICT: Dict[str, Dict[str, Any]] = {
+    "all": {
+        "install_requirements": True,
+        "filter_requirements": False,
+        "install_modules": True,
+        "module_names": [],  # empty list means to take all available modules
+        "jlab_install_extensions": True,
+    },
+    "allbutjupyterext": {
+        "install_requirements": True,
+        "filter_requirements": False,
+        "install_modules": True,
+        "module_names": [],  # empty list means to take all available modules
+        "jlab_install_extensions": False,
+    },
+    "products": {
+        "install_requirements": False,
+        "filter_requirements": False,
+        "install_modules": True,
+        "module_names": [],  # empty list means to take all available modules
+        "jlab_install_extensions": False,
+    },
+    "packages": {
+        "install_requirements": True,
+        "filter_requirements": False,
+        "install_modules": False,
+        "module_names": [],
+        "jlab_install_extensions": False,
+    },
+    "jupyterext": {
+        "install_requirements": False,
+        "filter_requirements": False,
+        "install_modules": False,
+        "module_names": [],
+        "jlab_install_extensions": True,
+    },
+}
+
 LOG_LEVEL: str = "INFO"
 MAX_LINE_LENGTH: int = 88
 LOGGING_FORMAT: str = (
@@ -67,14 +105,6 @@ def exec_cmd_or_exit(command_list: list) -> None:
 
     if exec_code != 0:
         sys.exit(exec_code)
-
-
-def get_current_conda_env_path():
-    return os.environ["CONDA_PREFIX"]
-
-
-def get_current_conda_env_name():
-    return os.environ["CONDA_DEFAULT_ENV"]
 
 
 CURRENT_PATH: Path = Path(__file__).absolute().parent
@@ -191,45 +221,9 @@ def filter_python_requirements_by_mode(
 
 
 def update_conda_env(conda_env_path, source_conda_env_yaml_file, mode, debug=False):
-    __MODE2CMD_DICT: Dict[str, Dict[str, Any]] = {
-        "all": {
-            "install_requirements": True,
-            "filter_requirements": False,
-            "install_modules": True,
-            "module_names": [],  # empty list means to take all available modules
-            "jlab_install_extensions": True,
-        },
-        "allbutjupyterext": {
-            "install_requirements": True,
-            "filter_requirements": False,
-            "install_modules": True,
-            "module_names": [],  # empty list means to take all available modules
-            "jlab_install_extensions": False,
-        },
-        "products": {
-            "install_requirements": False,
-            "filter_requirements": False,
-            "install_modules": True,
-            "module_names": [],  # empty list means to take all available modules
-            "jlab_install_extensions": False,
-        },
-        "packages": {
-            "install_requirements": True,
-            "filter_requirements": False,
-            "install_modules": False,
-            "module_names": [],
-            "jlab_install_extensions": False,
-        },
-        "jupyterext": {
-            "install_requirements": False,
-            "filter_requirements": False,
-            "install_modules": False,
-            "module_names": [],
-            "jlab_install_extensions": True,
-        },
-    }
-    if mode in __MODE2CMD_DICT:
-        cmd_run_param_dict: Dict[str, Any] = __MODE2CMD_DICT[mode]
+
+    if mode in ENV_UPDATE_MODE2CMD_DICT:
+        cmd_run_param_dict: Dict[str, Any] = ENV_UPDATE_MODE2CMD_DICT[mode]
     else:
         cmd_run_param_dict: Dict[str, Any] = {
             "install_requirements": True,
