@@ -19,7 +19,7 @@ from pip._internal.req import parse_requirements
 
 # flake8: noqa
 
-NAMESPACE = "jupyterlab_ml_devenv"
+NAMESPACE = "mldevenv"
 SERVICE = "envtool"
 
 NAME = "{}.{}".format(NAMESPACE, SERVICE)
@@ -30,7 +30,7 @@ reqs = [str(ir.requirement) for ir in install_reqs]
 
 setup(
     name=f"{NAMESPACE}.{SERVICE}",
-    version="0.0.1dev",
+    version="0.2.1",
     description="JupyterLab-based ML development environment",
     long_description="",
     author="Peter Gagarinov",

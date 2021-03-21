@@ -1,3 +1,4 @@
+#!/bin/bash
 # Copyright Peter Gagarinov.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,7 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#!/bin/bash
 set -e
 MSGCOLOR=`tput setaf 48`
 NOCOLOR=`tput sgr0`
@@ -21,16 +21,17 @@ printf "${MSGCOLOR}Installing conda package via conda from conda-forge channel..
 # we install conda so that it is not installed later in setup.py
 # because if conda is installed via pip it will make conda 
 # not functional as a stand-alone command (which is what we need) 
-conda install -y -c conda-forge conda
+conda install -y -c conda-forge conda pyyaml
+
 printf "${MSGCOLOR}Installing conda package via conda from conda-forge channel: done${NOCOLOR}\n\n"
 
 printf "${MSGCOLOR}Installing MLDevEnv management tool...${NOCOLOR}\n"
 pip install -e .
 printf "${MSGCOLOR}Installing MLDevEnv management tool: done${NOCOLOR}\n\n"
 
-printf "${MSGCOLOR}Installing all dependencies for Jupyter ML development environment...${NOCOLOR}\n"
-mlenvtool conda_env_cur_update all
-printf "${MSGCOLOR}Installing all dependencies for Jupyter ML development environment: done${NOCOLOR}\n\n"
+printf "${MSGCOLOR}Installing all dependencies for ML Development Environment...${NOCOLOR}\n"
+mlenvtool conda_env_cur_update -y 
+printf "${MSGCOLOR}Installing all dependencies for ML Development Environment: done${NOCOLOR}\n\n"
 
 
 printf "${MSGCOLOR}Installing enabling jupyterlab extensions...${NOCOLOR}\n"
