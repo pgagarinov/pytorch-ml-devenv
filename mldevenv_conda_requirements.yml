@@ -49,13 +49,14 @@ dependencies:
 - boto3==1.17.33
 - plotly==4.14.3
 - jupyterlab_execute_time==2.0.2
+- pyyaml==5.3.1
+- pytorch-lightning==1.2.4
 - pip:
   - jupytext==1.11.0
   - jupyterlab-git==0.30.0b2
   - gym==0.18.0
   - pytorch-lightning-bolts==0.3.0
   - timm==0.4.5
-  - pyyaml==5.3.1
   - spacy==2.3.5
   - fasttext==0.9.2
   - mlflow==1.14.1

@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 ## [unreleased.Bugfixes] - YYYY-MM-DD
+### Added
+ 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+
+## [0.2.1] - 2021-03-22
 
 ### Added
  - MLEnvTool:
@@ -14,6 +26,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
  - New conda packages: 
     - jupyterlab_execute_time==2.0.2
     - plotly==4.14.3
+    - pytorch-lightning==1.2.4
  - New jupyterlab extensions:
     - jupyterlab-plotly@v4.14.3
  - `generate_help.sh` shell script to capture the cli help of MLEnvTool (helps to keep README.md up-to-date)
@@ -21,6 +34,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 ### Changed
  - Major update of all the package versions including PyTorch (to v1.8) and torchvision (to v.0.9)
  - Major refactoring of MLEnvTool internals to improve source code readibility and maintainability
+ - pyyaml moved from pip to conda section in the conda env yaml file
 
 ### Deprecated
 
