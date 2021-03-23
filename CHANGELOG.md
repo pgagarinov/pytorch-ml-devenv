@@ -14,7 +14,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 ### Removed
 
 ### Fixed
-
+  - ./check_if_rogue_jupyterlab_is_installed.sh now uses bash instead of zsh
 
 ## [0.2.1] - 2021-03-22
 
