@@ -18,8 +18,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
   - ./check_if_rogue_jupyterlab_is_installed.sh now uses bash instead of zsh
 
 ## [0.2.2] - 2021-03-26
-### Added
- 
 ### Changed
  - Updated some of the packages
      - conda dependencies
@@ -61,10 +59,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 		-  - wandb==0.10.22
 		+  - wandb==0.10.23
 		```
-### Deprecated
-
-### Removed
-
 ### Fixed
   - ./check_if_rogue_jupyterlab_is_installed.sh now uses bash instead of zsh
 
