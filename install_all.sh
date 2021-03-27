@@ -47,7 +47,7 @@ printf "${MSGCOLOR}Removing dataclasses as it is a part of python 3 now: done${N
 
 
 printf "${MSGCOLOR}Checking if there is rogue JupyterLab installed...${NOCOLOR}\n"
-./check_if_rogue_jupyterlab_is_installed.sh
+$dir_path/check_if_rogue_jupyterlab_is_installed.sh
 printf "${MSGCOLOR}Checking if there is rogue JupyterLab installed: done${NOCOLOR}\n\n"
 printf "${MSGCOLOR}----------SUCCESS------------${NOCOLOR}\n"
 
