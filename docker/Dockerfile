@@ -21,3 +21,4 @@ RUN ~/pytorch-ml-devenv/create_install_all.sh $CONDA_ENV_NAME \
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 WORKDIR /home/${USER_NAME}
+RUN echo "source /opt/miniconda/bin/activate && conda activate ${CONDA_ENV_NAME}" >> ~/.bashrc 
