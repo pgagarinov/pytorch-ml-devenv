@@ -3,7 +3,7 @@ FROM archlinux
 ARG CONDA_ENV_NAME=ml-devenv-0
 ARG USER_NAME=ml-devenv-user
 RUN useradd $USER_NAME -m
-RUN pacman -Syy
+RUN pacman -Syy --noconfirm
 RUN pacman -S git gcc unrar wget sudo --noconfirm --needed
 RUN echo "${USER_NAME} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 USER $USER_NAME
@@ -20,4 +20,4 @@ RUN ~/pytorch-ml-devenv/create_install_all.sh $CONDA_ENV_NAME \
 # https://github.com/NVIDIA/nvidia-container-runtime#environment-variables-oci-spec
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
-
+WORKDIR /home/${USER_NAME}
