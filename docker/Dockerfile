@@ -13,7 +13,9 @@ RUN cd ~ && git clone https://github.com/pgagarinov/pytorch-ml-devenv.git
 RUN ~/awesome-linux-config/manjaro/basic/user/config_jupyter.sh
 RUN ~/awesome-linux-config/manjaro/basic/install_miniconda.sh
 SHELL ["/bin/bash", "-c"]
-RUN ~/pytorch-ml-devenv/create_install_all.sh $CONDA_ENV_NAME
+RUN ~/pytorch-ml-devenv/create_install_all.sh $CONDA_ENV_NAME \ 
+    && ~/.conda/envs/${CONDA_ENV_NAME}/bin/conda clean -ay \
+    && rm -rf ~/.cache
 
 # https://github.com/NVIDIA/nvidia-container-runtime#environment-variables-oci-spec
 ENV NVIDIA_VISIBLE_DEVICES all
