@@ -2,6 +2,8 @@ FROM archlinux
 
 ARG CONDA_ENV_NAME=ml-devenv-0
 ARG USER_NAME=ml-devenv-user
+LABEL conda-env-name=$CONDA_ENV_NAME
+LABEL user-name=$USER_NAME
 RUN useradd $USER_NAME -m
 RUN pacman -Syy --noconfirm
 RUN pacman -S git gcc unrar wget sudo --noconfirm --needed
