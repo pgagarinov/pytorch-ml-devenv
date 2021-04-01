@@ -30,7 +30,7 @@ reqs = [str(ir.requirement) for ir in install_reqs]
 
 setup(
     name=f"{NAMESPACE}.{SERVICE}",
-    version="0.2.1",
+    version="0.2.3",
     description="JupyterLab-based ML development environment",
     long_description="",
     author="Peter Gagarinov",

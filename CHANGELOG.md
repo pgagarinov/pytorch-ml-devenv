@@ -9,7 +9,33 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 ### Added
  
 ### Changed
-
+    ```
+     conda:
+	-- gensim==3.8.3
+	+- gensim==4.0.0
+	-- numpy==1.20.1
+	+- numpy==1.20.2
+	-- ipython==7.21.0
+	+- ipython==7.22.0
+	-- matplotlib==3.3.4
+	+- matplotlib==3.4.1
+	-- xeus-python==0.12.1
+	+- xeus-python==0.12.2
+	-- conda==4.9.2
+	-- pytorch-lightning==1.2.5
+	+- conda==4.10.0
+	+- pytorch-lightning==1.2.6
+	-- boto3==1.17.37
+	+- boto3==1.17.42
+	-- pytorch-lightning==1.2.5
+	+- pytorch-lightning==1.2.6
+	+- python-kaleido==0.2.1
+     pip: 
+	-  - mlflow==1.14.1
+	+  - mlflow==1.15.0
+	-  - wandb==0.10.23
+	+  - wandb==0.10.24
+  ```
 ### Deprecated
 
 ### Removed
