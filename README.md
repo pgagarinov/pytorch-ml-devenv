@@ -1,4 +1,5 @@
-PyTorch HyperLight ML Development Environment is a set of modern ML-oriented conda and pip packages with versions carefully chosen to make sure a seamless and conflict-free integration. 
+# PyTorch HyperLight ML Development Environment
+is a set of modern ML-oriented conda and pip packages with versions carefully chosen to make sure a seamless and conflict-free integration. 
 
 ## Prerequisites Features
 1. Linux operating system. The testing and development is done in Manjaro Linux. Windows and MacOS are not supported and there are no such plans. This limitation will be less critical once the docker container becomes available.
