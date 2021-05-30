@@ -1,4 +1,4 @@
-# PyTorch HyperLight ML Development Environment
+# PyTorch ML Development Environment
 is a set of modern ML-oriented conda and pip packages with versions carefully chosen to make sure a seamless and conflict-free integration. 
 
 ## Prerequisites Features
