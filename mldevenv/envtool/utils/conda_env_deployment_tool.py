@@ -120,10 +120,8 @@ def update_conda_env_from_relfile(
     conda_env_path: str, req_abspath: Union[Path, str], debug: bool = False
 ) -> None:
     conda_command_envupdate_list: List[str] = [
-        "conda",
-        "env",
-        "update",
-        "--debug" if debug else "",
+        "micromamba",
+        "install",
         "-p",
         conda_env_path,
         "-f",

@@ -24,7 +24,7 @@ printf "${MSGCOLOR}Installing conda package via conda from conda-forge channel..
 # we install conda so that it is not installed later in setup.py
 # because if conda is installed via pip it will make conda 
 # not functional as a stand-alone command (which is what we need) 
-conda install -y -c conda-forge conda pyyaml
+micromamba install -y -c conda-forge conda pyyaml
 
 printf "${MSGCOLOR}Installing conda package via conda from conda-forge channel: done${NOCOLOR}\n\n"
 
