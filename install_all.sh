@@ -41,9 +41,9 @@ printf "${MSGCOLOR}Installing enabling jupyterlab extensions...${NOCOLOR}\n"
 jupyter server extension enable --py jupyterlab_code_formatter
 printf "${MSGCOLOR}Installing enabling jupyterlab extensions: done${NOCOLOR}\n\n"
 
-printf "${MSGCOLOR}Removing dataclasses as it is a part of python 3 now...${NOCOLOR}\n"
-pip uninstall -y dataclasses
-printf "${MSGCOLOR}Removing dataclasses as it is a part of python 3 now: done${NOCOLOR}\n\n"
+# printf "${MSGCOLOR}Removing dataclasses as it is a part of python 3 now...${NOCOLOR}\n"
+# pip uninstall -y dataclasses
+# printf "${MSGCOLOR}Removing dataclasses as it is a part of python 3 now: done${NOCOLOR}\n\n"
 
 
 printf "${MSGCOLOR}Checking if there is rogue JupyterLab installed...${NOCOLOR}\n"

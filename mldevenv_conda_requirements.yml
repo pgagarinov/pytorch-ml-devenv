@@ -93,4 +93,6 @@ dependencies:
 - prometheus_client >= 0.7.1, < 0.14.0 # for ray 2.0
 - click>=7.0,<=8.0.4 # for ray 2.0
 - grpcio>=1.28.1,<=1.43.0 # for ray 2.0
-
+# jupyter
+- ipywidgets==7.7.2
+- jupyterlab_widgets=1.1.1
