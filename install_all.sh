@@ -32,9 +32,14 @@ printf "${MSGCOLOR}Installing MLDevEnv management tool...${NOCOLOR}\n"
 pip install -e $dir_path 
 printf "${MSGCOLOR}Installing MLDevEnv management tool: done${NOCOLOR}\n\n"
 
-printf "${MSGCOLOR}Installing all dependencies for ML Development Environment...${NOCOLOR}\n"
+printf "${MSGCOLOR}Installing conda dependencies for ML Development Environment...${NOCOLOR}\n"
 mlenvtool conda_env_cur_update -y 
-printf "${MSGCOLOR}Installing all dependencies for ML Development Environment: done${NOCOLOR}\n\n"
+printf "${MSGCOLOR}Installing conda dependencies for ML Development Environment: done${NOCOLOR}\n\n"
+
+
+printf "${MSGCOLOR}Installing pip dependencies for ML Development Environment...${NOCOLOR}\n"
+pip install -r ./mldevenv_requirements.txt
+printf "${MSGCOLOR}Installing pip dependencies for ML Development Environment: done${NOCOLOR}\n\n"
 
 
 printf "${MSGCOLOR}Installing enabling jupyterlab extensions...${NOCOLOR}\n"
