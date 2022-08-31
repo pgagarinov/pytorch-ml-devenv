@@ -242,8 +242,7 @@ def update_conda_env(conda_env_path, source_conda_env_yaml_file, update_mode, de
         os.unlink(str(python_requirements_abs_path))
 
         exec_cmd(["python", "-m", "spacy", "download", "en_core_web_sm"])
-        exec_cmd(["python", "-m", "spacy", "download", "en"])
-        exec_cmd(["python", "-m", "spacy", "download", "de"])
+        exec_cmd(["python", "-m", "spacy", "download", "de_core_news_sm"])
         exec_cmd(["python", "-m", "spacy", "download", "xx_ent_wiki_sm"])
 
     if cmd_run_param_dict["install_modules"]:
