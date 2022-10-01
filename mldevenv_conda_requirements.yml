@@ -74,7 +74,7 @@ dependencies:
 - navec>=0.10.0
 - summa>=3.0.3
 - pretrainedmodels>=0.7.4
-- albumentations>=1.2.1
+- albumentations==1.3.0
 - tabulate>=0.8.10
 - pytest>=6.2.2
 - coverage>=6.4.4
@@ -92,7 +92,8 @@ dependencies:
 - prometheus_client >= 0.7.1, < 0.14.0 # for ray 2.0
 - click>=7.0,<=8.0.4 # for ray 2.0
 - grpcio>=1.28.1,<=1.43.0 # for ray 2.0
-# jupyter
+# - jupyter
 - ipywidgets==7.7.2
 - jupyterlab_widgets=1.1.1
 - fastai::opencv-python-headless>=4.6.*
+# - imgaug # allows to use IAAPerspective in albumentations
