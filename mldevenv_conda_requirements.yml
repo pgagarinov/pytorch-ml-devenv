@@ -43,7 +43,7 @@ dependencies:
 - jupyterlab_code_formatter>=1.4.5
 - ipympl>=0.7.0
 - conda>=4.10.0
-- pytorch-lightning>=1.7.*
+- pytorch-lightning==1.6.5
 - requests>=2.25.1
 - pillow>=7.2.0
 - boto3>=1.17.42
