@@ -97,4 +97,4 @@ dependencies:
 - jupyterlab_widgets=1.1.1
 - py-opencv>=4.5.5
 - opencv>=4.5.5
-- pyarrow>=9.0.0  
+- pyarrow==6.0.1 # for ray[air] 2.0.0

@@ -3,8 +3,7 @@ cufflinks
 #>=0.17.3
 torchsummary
 #>=1.5.1
-ray[tune]>=2.0.*
-ray[serve]>=2.0.*
+ray[air]>=2.0.0
 rouge
 #>=1.0.0
 timit-utils
@@ -13,3 +12,4 @@ pytorch-pretrained-vit
 #>=0.0.7
 ml-collections
 #>=0.1.0
+ray_lightning==0.3.0
